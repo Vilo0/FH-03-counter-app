@@ -6,7 +6,7 @@ exports[`Pruebas en <PrimeraApp /> debe de mostrar <PrimeraApp /> correctamente 
     Hola, Soy Gokú
   </h1>
   <p>
-    Soy un subtitulo
+    Soy un subtitulos
   </p>
 </Fragment>
 `;

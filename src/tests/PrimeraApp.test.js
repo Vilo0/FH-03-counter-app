@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import '@testing-library/react';
 import { shallow } from 'enzyme/build';
 import PrimeraApp from '../PrimeraApp';
 
@@ -18,5 +18,18 @@ describe('Pruebas en <PrimeraApp />', () => {
         expect(wrapper).toMatchSnapshot();
 
     })
+
+    test('debe de mostrar el subtitulo enviado por props', () => {
+        
+        const saludo = 'Hola, soy Gokú';
+        const subTitulo = 'Soy un subtitulos'
+
+        const wrapper = shallow(<PrimeraApp saludo={saludo} subtitulo={subTitulo} />);
+
+        const textoParrafo = wrapper.find('p').text();
+        expect(textoParrafo).toBe(subTitulo);
+
+    })
+    
     
 });
