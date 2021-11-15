@@ -51,12 +51,17 @@ describe('Pruebas en <CounterApp />', () => {
     });
     
     test('debe de incrementar con el botón reset', () => {
+
+        const wrapper = shallow( <CounterApp value={105} /> );
         
+        wrapper.find('button').at(2).simulate('click');
+        wrapper.find('button').at(2).simulate('click');
+        wrapper.find('button').at(2).simulate('click');
         wrapper.find('button').at(1).simulate('click');
 
         const contador = wrapper.find('h2').text().trim();
 
-        expect(contador).toBe('5');
+        expect(contador).toBe('105');
 
     });
 
